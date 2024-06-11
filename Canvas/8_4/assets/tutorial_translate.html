@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="canvas" height="500" width="500"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        for (let i = 0; i < 10; i++) {
+            ctx.save();
+            ctx.fillStyle = `rgb(61,${(i * 30)} , 255)`;
+            ctx.translate(10 + (30 * i), 0);
+            ctx.fillRect(0, 0, 30, 30);
+            ctx.restore();
+        }
+    </script>
+</body>
+</html>
